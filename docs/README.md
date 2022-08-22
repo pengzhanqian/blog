@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /img/index-read.gif
+heroImage: /img/index.gif
 actionText: 快速开始 →
 actionLink: /java_docs/
 features:
@@ -8,9 +8,9 @@ features:
   details: 不积跬步无以至千里, 仰望星空还需脚踏实地
 - title: 构建体系
   details: 告别碎片化学习，帮助你构筑你自己的知识体系
-- title: 全栈开发
-  details: 以Java开发为背景，全栈开发，DevOps
+- title: 高效开发
+  details: 以Java开发的知识体系为背景，高效开发，DevOps
 footer: '备案号: xxx | pengzhanqian | © 2022-present'
 ---
 
-###  全栈知识体系总览
+###  Java 知识体系学习总览

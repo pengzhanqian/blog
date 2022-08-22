@@ -2,19 +2,19 @@ module.exports = {
     locales: {
         "/": {
             lang: "zh-CN",
-            title: "Java 全栈知识体系",            
+            title: "Java 知识体系学习",            
             description: "包含: Java 基础, Spring..."
         }
     },
     host: '192.168.244.129',
-    //title: 'java全栈知识体系',
-    //description: '包含: Java 基础,Spring 基础...',
     port: 8082,
     repo: 'https://github.com/pengzhanqian/blog',
     base: '/',
-    dest: 'dist',
-    // md文档显示行数
+    //编译后的文件位置设置 默认 .vuepress/dist
+    //dest: '',
+    // markdown 设置
     markdown: {
+        //md文档显示行数
         lineNumbers: true,
         externalLinks: {
             target: '_blank', rel: 'noopener noreferrer'
@@ -30,6 +30,8 @@ module.exports = {
         ["meta", {name: "apple-mobile-web-app-capable", content: "yes"}]
     ],
     plugins: [
+        ['@vuepress/back-to-top',true],
+        [['vuepress-plugin-code-copy', true]]
     ],
     lastUpdated: 'Last Updated',
     themeConfig: { 
@@ -40,24 +42,79 @@ module.exports = {
         prevLinks: true,
         //页面滚动效果展示
         smoothScroll: true,
+        sidebarDepth: 4,
         nav: [ 
-            { text: '首页', link: '/' },
-            { text: 'JAVA', link: '/java_docs/' },
-            { text: 'Spring', link: '/spring_docs/' },
-            // {
-            //     text: '2022',
-            //     ariLabel: '2022',
-            //     items: [
-            //         { text: 'May', link: '/2022/5/' }
-            //     ]
-            // },
+            { 
+                text: '首页', 
+                link: '/' 
+            },
+            { 
+                text: 'JAVA', 
+                link: '/java_docs/'
+             },
+            { 
+                text: 'Spring',
+                 link: '/spring_docs/'
+            },
+            { 
+                text: '关于',
+                link: '/about_docs/',
+                ariLabel: '关于',
+                items: [
+                    { 
+                        text: '关于 - 我',
+                        link: '/about_docs/about_me_docs/',
+                        ariLabel: '关于 - 我',
+                        items: [
+                            { text: '关于 - 我', ariLabel: '关于 - 我',link: '/about_docs/about_me_docs/关于 - 我' },
+                        ]
+                    },
+                    { 
+                        text: '关于 - 本文档的搭建',
+                        link: '/about_docs/about_vuepress_docs/',
+                        ariLabel: '关于 - 本文档的搭建',
+                        items: [
+                            { text: '关于 - 本文档的插件', ariLabel: '关于 - 本文档的插件',link: '/about_docs/about_vuepress_docs/关于 - 本文档的插件' },
+                        ]
+                    }
+                ]
+            },
             { text: 'github', link: 'https://github.com/pengzhanqian/blog/tree/gh-pages' }
         ],
-        // sidebar: { 
-        //     '/2022/': [
-        //         ['/2022/5/', '5月份']
-        //     ]
-        // }
+        sidebar: {
+            sidebarDepth: 4,
+            '/about_docs/': [
+                // {
+                //     title: '关于',
+                //     collapsable: true,
+                //     path: "/about_docs/",
+                // },
+                {
+                    title: '关于',
+                    collapsable: false,
+                    path: "/about_docs/about_me_docs/",
+                    children: [
+                        {
+                            title: '关于 - 我',
+                            collapsable: false,
+                            path: "/about_docs/about_me_docs/关于 - 我"
+                        }
+                    ]
+                },
+                {
+                    title: '关于 - 本文档的搭建',
+                    collapsable: false,
+                    path: "/about_docs/about_vuepress_docs/",
+                    children: [
+                        {
+                            title: '关于 - 本文档的插件',
+                            collapsable: false,
+                            path: "/about_docs/about_vuepress_docs/关于 - 本文档的插件",
+                        }
+                    ]
+                }
+            ]
+        }
     }
   }
   
