@@ -15,7 +15,8 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "deploy": "rm -rf node_modules/.cache/gh-pages/ &&  gh-pages -d docs/.vuepress/dist",
-    "commit": "yarn build && yarn deploy"
+    "commit": "yarn build && yarn deploy",
+    "push": "git pull && git status && git add . && git commit -m '提交代码' && git push "
   },
   "dependencies": {
     "vuepress-plugin-code-copy": "^1.0.6"
