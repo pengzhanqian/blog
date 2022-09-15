@@ -6,7 +6,7 @@ module.exports = {
             description: "包含: Java 基础, Spring..."
         }
     },
-    host: '192.168.244.129',
+    host: '192.168.91.129',
     port: 8082,
     repo: 'https://github.com/pengzhanqian/blog',
     base: '/',
