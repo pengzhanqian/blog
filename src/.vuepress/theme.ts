@@ -82,9 +82,9 @@ export default hopeTheme({
     // 取消注释它们如果你需要 TeX 支持
     math: {
       // 启用前安装 katex
-      //type: "katex",
+      type: "katex",
       // 或者安装 mathjax-full
-      type: "mathjax",
+      //type: "mathjax-full",
     },
 
     // 如果你需要幻灯片，安装 @vuepress/plugin-revealjs 并取消下方注释
@@ -126,6 +126,17 @@ export default hopeTheme({
       repoId: "R_kgDOG_Pt2A",
       category: "Announcements",
       categoryId: "DIC_kwDOG_Pt2M4COD69",
+    },
+
+    watermark: {
+      content: "学习笔记",
+    },
+    copyCode: {
+      showInMobile: true,
+    },
+    copyright: {
+      global: true,
+      license: "署名-非商业性使用-相同方式共享 4.0 国际",
     },
 
     components: {

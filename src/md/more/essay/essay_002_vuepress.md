@@ -362,6 +362,7 @@ pnpm add -D markmap-lib markmap-toolbar markmap-view
 pnpm add -D mermaid
 pnpm add -D mathjax-full
 pnpm add -D katex
-
+pnpm add -D markdown-it-attrs
+pnpm add -D artplayer@latest
 ```
 
