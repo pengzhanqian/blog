@@ -352,3 +352,16 @@ Done in 3.6s
 然后修改下导航栏和侧边栏
 
 添加插件 
+
+```shell
+pnpm add -D @vuepress/plugin-pwa@2.0.0-rc.109
+pnpm add -D chart.js
+pnpm add -D echarts
+pnpm add -D flowchart.ts
+pnpm add -D markmap-lib markmap-toolbar markmap-view
+pnpm add -D mermaid
+pnpm add -D mathjax-full
+pnpm add -D katex
+
+```
+
