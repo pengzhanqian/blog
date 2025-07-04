@@ -4,7 +4,6 @@ import theme from "./theme.js";
 
 export default defineUserConfig({
   base: "/blog/",
-  port: 8081,
   dest: 'docs/.vuepress/dist',
   lang: "zh-CN",
   title: "学习笔记",
