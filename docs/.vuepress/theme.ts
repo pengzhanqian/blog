@@ -15,7 +15,7 @@ export default hopeTheme({
 
   repo: "https://github.com/pengzhanqian/blog",
 
-  docsDir: "src",
+  docsDir: "docs",
 
   // 导航栏
   navbar,
