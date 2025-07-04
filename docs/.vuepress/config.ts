@@ -3,7 +3,7 @@ import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 
 export default defineUserConfig({
-  base: "/blog/",
+  base: "/",
   dest: 'docs/.vuepress/dist',
   lang: "zh-CN",
   title: "学习笔记",
