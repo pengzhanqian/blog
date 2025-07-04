@@ -1,7 +1,7 @@
 ---
-title: 常见问题
+title: 更多
 index: false
-icon: fa6-solid:question
+icon: ellipsis
 category:
   - Markdown 文档管理
 ---

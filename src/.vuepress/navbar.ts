@@ -30,10 +30,11 @@ export default navbar([
   // },
   {
       text: '学习笔记',
-      icon: "book",
+      icon: 'fa6-solid:book-open',
       children:[
         {
           text: '学习笔记 - JAVA',
+          icon: 'fa6-brands:java',
           children: [
             {
               text: '初识JAVA',
@@ -51,6 +52,7 @@ export default navbar([
         },
         {
           text: '学习笔记 - GO',
+          icon: 'fa6-brands:golang',
           children: [
             {
               text: 'GoLang 基础',
@@ -60,6 +62,7 @@ export default navbar([
         },
         {
           text: '学习笔记 - 响应式编程',
+          icon: 'fa6-solid:code',
           children: [
             {
               text: '第一章: 走进响应式编程',
@@ -71,6 +74,7 @@ export default navbar([
     },
     {
       text: '常见问题',
+      icon: 'fa6-solid:question',
       link: '/md/question/',
       children:[
         {
@@ -85,6 +89,7 @@ export default navbar([
     },
     {
       text: '更多',
+      icon: 'fa6-solid:ellipsis',
       children:[
         {
           text: '阿里',

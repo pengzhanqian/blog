@@ -118,14 +118,32 @@ export default hopeTheme({
   },
 
   // 在这里配置主题提供的插件
+  /**
+   * <script src="https://giscus.app/client.js"
+        data-repo="pengzhanqian/giscus"
+        data-repo-id="R_kgDOPGh8SA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOPGh8SM4Cscfx"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light_high_contrast"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+   */
   plugins: {
     // 注意: 仅用于测试! 你必须自行生成并在生产环境中使用自己的评论服务
     comment: {
       provider: "Giscus",
-      repo: "vuepress-theme-hope/giscus-discussions",
-      repoId: "R_kgDOG_Pt2A",
+      repo: "pengzhanqian/giscus",
+      repoId: "R_kgDOPGh8SA",
       category: "Announcements",
-      categoryId: "DIC_kwDOG_Pt2M4COD69",
+      categoryId: "DIC_kwDOPGh8SM4Cscfx",
     },
 
     watermark: {
