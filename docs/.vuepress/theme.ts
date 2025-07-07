@@ -146,16 +146,12 @@ export default hopeTheme({
       categoryId: "DIC_kwDOPGh8SM4Cscfx",
     },
 
-    watermark: {
-      content: "学习笔记",
-    },
-    copyCode: {
-      showInMobile: true,
-    },
-    copyright: {
-      global: true,
-      license: "署名-非商业性使用-相同方式共享 4.0 国际",
-    },
+    // 直接开启水印
+    watermark: true,
+    
+    copyCode: true,
+
+    copyright: true,
 
     components: {
       components: [

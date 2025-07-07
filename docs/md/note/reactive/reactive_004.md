@@ -37,7 +37,28 @@
 
 > 现在，1个框架就全搞定了。 这就是 `Project Reactor` 框架
 
-## 【3】引入相关jar
+## 【3】Reactor 响应式编程模型
+
+![image-20250704164310639](../../../../src/.vuepress/public/images/image-20250704164310639.png)
+
+```mermaid
+graph LR
+A[数据源 Publisher] -->|发布事件| B[操作符链<br>map/filter/flatMap]
+B -->|异步传递| C[订阅者 Subscriber]
+C -->|背压反馈| A
+```
+
+```mermaid
+flowchart TB
+subgraph 响应式系统
+  A[消息驱动通信层] --> B[异步非阻塞服务]
+  B --> C[响应式数据存储]
+  C --> D[弹性容错机制]
+end
+
+```
+
+## 【4】引入相关jar
 
 ::: tabs
 
@@ -77,13 +98,17 @@
 
 :::
 
-## 【4】核心组件 Mono 和 Flux 
+## 【5】核心组件 Mono 和 Flux 
 
 > 万物皆数据，数据分2种，1种是**单个或者没有**，另一种是**多个**
+>
+> 数据流 = N个元素  + 1个信号(完成/异常)
 
-### 4.1 Mono
 
-### 4.2 Flux
+
+> ![image-20250704164948153](../../../../src/.vuepress/public/images/image-20250704164948153.png)
+
+
 
 ## 【X】参考资料
 

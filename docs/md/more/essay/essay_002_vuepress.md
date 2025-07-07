@@ -364,5 +364,6 @@ pnpm add -D mathjax-full
 pnpm add -D katex
 pnpm add -D markdown-it-attrs
 pnpm add -D artplayer@latest
+pnpm add -D @vuepress/plugin-watermark@2.0.0-rc.109
 ```
 
