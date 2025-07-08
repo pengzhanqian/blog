@@ -2068,6 +2068,45 @@ Flux.just("foo", "bar")
     .take(1); 
 ```
 
+### 12.7 Ignore Error Continue 
+
+> 忽略当前异常，继续执行, 使用`OnErrorContinue`
+
+```java
+@Test
+    public void test4() {
+        Flux.just(1, 2, 3, 4, 5, 0, 7, 8, 9, 10)
+                .map(this::doSomethingDangerous1)
+                .onErrorContinue((error, complete) -> {
+                    System.out.println("error: " + error);
+                    System.out.println("complete: " + complete);
+                    System.out.println("发现" + complete + "有问题,但是继续执行其他的,我会记录这个问题");
+                })
+                .log().subscribe();
+        /*
+        [ INFO] (main) | onSubscribe([Fuseable] FluxContextWrite.ContextWriteSubscriber)
+        [ INFO] (main) | request(unbounded)
+        [ INFO] (main) | onNext(10)
+        [ INFO] (main) | onNext(5)
+        [ INFO] (main) | onNext(3)
+        [ INFO] (main) | onNext(2)
+        [ INFO] (main) | onNext(2)
+        error: java.lang.ArithmeticException: / by zero
+        complete: 0
+        发现0有问题,但是继续执行其他的,我会记录这个问题
+        [ INFO] (main) | onNext(1)
+        [ INFO] (main) | onNext(1)
+        [ INFO] (main) | onNext(1)
+        [ INFO] (main) | onNext(1)
+        [ INFO] (main) | onComplete()
+         */
+    }
+
+    private Object doSomethingDangerous1(Integer integer) {
+        return 10 / integer;
+    }
+```
+
 ## 【13】Reactor 超时和重试
 
 
