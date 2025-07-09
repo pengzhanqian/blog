@@ -1971,7 +1971,7 @@ Flux.just("timeout1")
 ```
 
 ```java
- @Test
+ 	@Test
     public void test3() {
         Flux.just(10)
                 .map(this::doSomethingDangerous)
@@ -1979,26 +1979,26 @@ Flux.just("timeout1")
                 .subscribe(v -> System.out.println("v: " + v),
                         error -> System.out.println("<ERROR>: " + error.getMessage()),
                         () -> System.out.println("<COMPLETE>"))
-```
-
         Flux.just(1, 2, 3, 4)
-                .map(this::doSomethingDangerous)
-                .onErrorMap(error -> new BusinessException("自定义业务异常: " + error.getMessage()))
-                .subscribe(v -> System.out.println("v: " + v),
-                        error -> System.out.println("<ERROR>: " + error.getMessage()),
-                        () -> System.out.println("<COMPLETE>"));
-        // <ERROR>: 自定义业务异常: / by zero
+            .map(this::doSomethingDangerous)
+            .onErrorMap(error -> new BusinessException("自定义业务异常: " + error.getMessage()))
+            .subscribe(v -> System.out.println("v: " + v),
+                    error -> System.out.println("<ERROR>: " + error.getMessage()),
+                    () -> System.out.println("<COMPLETE>"));
+    // <ERROR>: 自定义业务异常: / by zero
+}
+
+private Object doSomethingDangerous(Integer integer) {
+    return integer / 0;
+}
+
+class BusinessException extends RuntimeException {
+    public BusinessException(String message) {
+        super(message);
     }
-    
-    private Object doSomethingDangerous(Integer integer) {
-        return integer / 0;
-    }
-    
-    class BusinessException extends RuntimeException {
-        public BusinessException(String message) {
-            super(message);
-        }
-    }
+}
+            
+```
 
 ### 12.5 Catch, log an error-specific message, and re-throw.
 
