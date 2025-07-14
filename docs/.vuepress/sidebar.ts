@@ -148,8 +148,13 @@ export default sidebar({
                     collapsible: true
                 },
                 {
-                    text: '第五章: Spring WebFlux',
+                    text: '第五章: Spring WebFlux 框架',
                     link: '/md/note/reactive/reactive_005.md',
+                    collapsible: true
+                },
+                {
+                    text: '第六章: Spring Data R2DBC  异步查询数据库',
+                    link: '/md/note/reactive/reactive_006.md',
                     collapsible: true
                 }
             ]
