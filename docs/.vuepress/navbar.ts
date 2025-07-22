@@ -29,6 +29,11 @@ export default navbar([
   //   link: "https://theme-hope.vuejs.press/zh/",
   // },
   {
+    text: '面试',
+    icon: 'fa6-solid:interview',
+    link: '/md/note/interview/',
+  },
+  {
       text: '学习笔记',
       icon: 'fa6-solid:book-open',
       children:[
