@@ -52,6 +52,10 @@ export default navbar([
             {
               text: '深入理解JVM',
               link: '/md/note/java/jvm/jvm_001.md'
+            },
+            {
+              text: 'JAVA代码细节',
+              link: '/md/note/java/detail/detail_001.md'
             }
           ]
         },
