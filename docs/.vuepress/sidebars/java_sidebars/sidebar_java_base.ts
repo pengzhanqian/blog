@@ -41,6 +41,11 @@ export const javaBaseSidebar = {
             text: 'JAVA基础知识 - 面向对象',
             link: '/md/note/java/basic/basic_008.md',
             collapsible: true
-        }
+        },
+        {
+            text: 'JAVA基础知识 - 异常',
+            link: '/md/note/java/basic/basic_009.md',
+            collapsible: true
+        },
     ]
 }
