@@ -1,7 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
 
-import navbar from "./navbar.js";
-import sidebar from "./sidebar.js";
+import navbar from "./configs/navbar.js";
+import sidebar from "./configs/sidebar.js";
 
 export default hopeTheme({
   hostname: "https://pengzhanqian.github.io",
