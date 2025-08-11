@@ -1,4 +1,4 @@
-export const reactiveSidebar = [
+export const reactiveSidebar =  [
     {
         text: '响应式编程',
         link: '/md/note/reactive/',
@@ -11,7 +11,7 @@ export const reactiveSidebar = [
             },
             {
                 text: '第二章: 前置基础学习',
-                link: '/md/note/reactive/reactive_002.md', 
+                link: '/md/note/reactive/reactive_002.md',
                 collapsible: true
             },
             {

@@ -1,50 +1,22 @@
-import { navbar } from "vuepress-theme-hope";
-
-export default navbar([
-  "/",
-  // "/portfolio",
-  // "/demo/",
-  // {
-  //   text: "指南",
-  //   icon: "lightbulb",
-  //   prefix: "/guide/",
-  //   children: [
-  //     {
-  //       text: "Bar",
-  //       icon: "lightbulb",
-  //       prefix: "bar/",
-  //       children: ["baz", { text: "...", icon: "ellipsis", link: "" }],
-  //     },
-  //     {
-  //       text: "Foo",
-  //       icon: "lightbulb",
-  //       prefix: "foo/",
-  //       children: ["ray", { text: "...", icon: "ellipsis", link: "" }],
-  //     },
-  //   ],
-  // },
-  // {
-  //   text: "V2 文档",
-  //   icon: "book",
-  //   link: "https://theme-hope.vuejs.press/zh/",
-  // },
-  {
-    text: '面试',
-    icon: 'fa6-solid:interview',
-    link: '/md/note/interview/',
-  },
-  {
-    text: '算法',
-    icon: 'fa6-solid:algorithm',
-    link: '/md/algorithm/',
-  },
-  {
+export const navbar =
+[
+    {
+      text: '首页',
+      link: '/'
+    },
+    {
+      text: '面试',
+      link: '/md/interview/',
+    },
+    {
+      text: '算法',
+      link: '/md/algorithm/',
+    },
+    {
       text: '学习笔记',
-      icon: 'fa6-solid:book-open',
       children:[
         {
           text: '学习笔记 - JAVA',
-          icon: 'fa6-brands:java',
           children: [
             {
               text: '初识JAVA',
@@ -66,7 +38,6 @@ export default navbar([
         },
         {
           text: '学习笔记 - GO',
-          icon: 'fa6-brands:golang',
           children: [
             {
               text: 'GoLang 基础',
@@ -76,7 +47,6 @@ export default navbar([
         },
         {
           text: '学习笔记 - 响应式编程',
-          icon: 'fa6-solid:code',
           children: [
             {
               text: '第一章: 走进响应式编程',
@@ -88,7 +58,6 @@ export default navbar([
     },
     {
       text: '常见问题',
-      icon: 'fa6-solid:question',
       link: '/md/question/',
       children:[
         {
@@ -103,7 +72,6 @@ export default navbar([
     },
     {
       text: '更多',
-      icon: 'fa6-solid:ellipsis',
       children:[
         {
           text: '阿里',
@@ -119,4 +87,4 @@ export default navbar([
         }
       ]
     },
-]);
+  ]

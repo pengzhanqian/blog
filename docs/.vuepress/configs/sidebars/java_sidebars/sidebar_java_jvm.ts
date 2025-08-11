@@ -3,7 +3,7 @@ export const javaJvmSidebar = {
     collapsible: true,
     children: [
         {
-            text: '深入理解JVM - 基础概念',
+            text: '深入理解JVM - ',
             link: '/md/note/java/jvm/jvm_001.md',
             collapsible: true
         }
