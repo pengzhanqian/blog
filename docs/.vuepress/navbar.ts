@@ -34,6 +34,11 @@ export default navbar([
     link: '/md/note/interview/',
   },
   {
+    text: '算法',
+    icon: 'fa6-solid:algorithm',
+    link: '/md/algorithm/',
+  },
+  {
       text: '学习笔记',
       icon: 'fa6-solid:book-open',
       children:[
